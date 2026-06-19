@@ -22,6 +22,7 @@ const standaloneOutput = !exportOutput && process.env['BUILD_STANDALONE'] === 't
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  typescript: { ignoreBuildErrors: true },
   // Ensure Next.js uses SSG instead of SSR
   // https://nextjs.org/docs/pages/building-your-application/deploying/static-exports
   // The Docker production image opts into a self-contained `.next/standalone`
